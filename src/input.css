@@ -35,3 +35,9 @@
     display: inline-block;
   }
 }
+
+@layer utilities {
+  .active {
+    @apply bg-blue;
+  }
+}

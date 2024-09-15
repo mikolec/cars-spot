@@ -848,6 +848,11 @@ a {
   text-underline-offset: 4px;
 }
 
+.active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(1 71 255 / var(--tw-bg-opacity));
+}
+
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
