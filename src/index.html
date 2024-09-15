@@ -5,6 +5,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+
+  <script defer>
+    window.onload = () => {
+
+      const moreTextEl = document.getElementById('more-text');
+      const toggleBtnEl = document.getElementById('toggle-read-more-btn');
+      const hideBtnEl = document.getElementById('toggle-read-less-btn');
+
+      toggleBtnEl.addEventListener('click', (event) => {
+        event.preventDefault()
+
+        moreTextEl.classList.toggle('hidden');
+        toggleBtnEl.classList.toggle('hidden');
+        hideBtnEl.classList.toggle('hidden');
+      });
+
+      hideBtnEl.addEventListener('click', (event) => {
+        event.preventDefault()
+
+        moreTextEl.classList.toggle('hidden');
+        toggleBtnEl.classList.toggle('hidden');
+        hideBtnEl.classList.toggle('hidden');
+      });
+
+      const moreTextEl2 = document.getElementById('more-text2');
+      const toggleBtnEl2 = document.getElementById('toggle-read-more-btn2');
+      const hideBtnEl2 = document.getElementById('toggle-read-less-btn2');
+
+      toggleBtnEl2.addEventListener('click', (event) => {
+        event.preventDefault()
+
+        moreTextEl2.classList.toggle('hidden');
+        toggleBtnEl2.classList.toggle('hidden');
+        hideBtnEl2.classList.toggle('hidden');
+      });
+
+      hideBtnEl2.addEventListener('click', (event) => {
+        event.preventDefault()
+
+        moreTextEl2.classList.toggle('hidden');
+        toggleBtnEl2.classList.toggle('hidden');
+        hideBtnEl2.classList.toggle('hidden');
+      });
+
+    }
+  </script>
+
 </head>
 
 <body>
@@ -59,21 +106,35 @@
 
   <!-- SEO -->
   <section id="seo" class="w-7xl text-white bg-darkgray px-[80px] py-[60px] flex gap-12">
-    <div class="">
+    <div class="w-[50%]">
       <h4 class="text-2xl mb-4">Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla commodo.</h4>
       <p class="mb-4">
         Mauris varius ipsum mauris, rutrum lobortis magna efficitur a. Donec egestas, nisl vehicula feugiat ornare, diam
-        turpis efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et [...]
+        turpis efficitur mi, ac venenatis eros ipsum ac arcu.
+        <span class="hidden" id="more-text">
+          Sed eu enim malesuada, fermentum mi eu, finibus velit. Nam quis blandit velit, vel vehicula neque. Etiam eu
+          lorem suscipit, sollicitudin ante at, pharetra quam.
+        </span>
       </p>
-      <a href="#" class="border-b-2">Rozwiń <img class="inline" src="./assets/arrow-down.svg" alt="arrow down" /></a>
+      <a href="#" class="border-b-2 focus:outline-none" id="toggle-read-more-btn">Rozwiń <img class="inline"
+          src="./assets/arrow-down.svg" alt="arrow down" /></a>
+      <a href="#" class="border-b-2 hidden focus:outline-none" id="toggle-read-less-btn">Zwiń <img
+          class="inline rotate-180" src="./assets/arrow-down.svg" alt="arrow up" /></a>
     </div>
-    <div class="">
+    <div class="w-[50%]">
       <h4 class="text-2xl mb-4">Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla commodo.</h4>
       <p class="mb-4">
         Mauris varius ipsum mauris, rutrum lobortis magna efficitur a. Donec egestas, nisl vehicula feugiat ornare, diam
-        turpis efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et [...]
+        turpis efficitur mi, ac venenatis eros ipsum ac arcu.
+        <span class="hidden" id="more-text2">
+          Sed eu enim malesuada, fermentum mi eu, finibus velit. Nam quis blandit velit, vel vehicula neque. Etiam eu
+          lorem suscipit, sollicitudin ante at, pharetra quam.
+        </span>
       </p>
-      <a href="#" class="border-b-2">Rozwiń <img class="inline" src="./assets/arrow-down.svg" alt="arrow down" /></a>
+      <a href="#" class="border-b-2 focus:outline-none" id="toggle-read-more-btn2">Rozwiń <img class="inline"
+          src="./assets/arrow-down.svg" alt="arrow down" /></a>
+      <a href="#" class="border-b-2 hidden focus:outline-none" id="toggle-read-less-btn2">Zwiń <img
+          class="inline rotate-180" src="./assets/arrow-down.svg" alt="arrow up" /></a>
     </div>
   </section>
 
