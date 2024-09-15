@@ -1,0 +1,16 @@
+{
+  "name": "cars-spot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw:build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css"
+  },
+  "author": "Mikołaj Lechtański",
+  "license": "ISC",
+  "description": "Cars Spot - zadanie rekrutacyjne",
+  "devDependencies": {
+    "tailwindcss": "^3.4.11"
+  }
+}

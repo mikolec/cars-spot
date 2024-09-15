@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header part (with common background) -->
+  <header class="bg-no-repeat min-h-[1000px]"
+    style="background-image: url(./assets/shadow.png), url(./assets/Hero.png), url(./assets/Element.svg); background-position: right 0 top 400px, right 0 top 400px, right 50px top 0;">
+    <!-- Top Navigation -->
+    <nav class="w-full x-auto flex items-center justify-between py-6 px-[80px]">
+      <img src="./assets/logo.svg" alt="CarsSpot logo">
+      <div class="flex justify-center gap-4">
+        <a href="#">
+          Galeria zdjęć
+        </a>
+        <a href="#">
+          FaQ
+        </a>
+      </div>
+      <button class="bg-blue text-white px-6 py-3 rounded-lg">Zadzwoń do nas</button>
+    </nav>
+    <!-- Hero Section -->
+    <section id="hero" class="w-7xl mx-auto text-left mt-[120px] h-[340px] px-[80px]">
+      <h2 class="text-7xl tracking-tight mb-10">Sprzedajemy samochody<br> z Europy</h2>
+      <p class="w-[30%] mb-12">Kup komfortowy pojazd, aby każda podróż<br> była wyjątkowym przeżyciem.</p>
+      <div>
+        <button class="bg-blue text-white px-6 py-3 rounded-lg mr-4 ">Zobacz zdjęcia</button>
+        <button class="bg-white text-blue px-6 py-3 rounded-lg border-2 border-blue">Zadzwoń do nas</button>
+      </div>
+    </section>
+  </header>
+
+  <!-- Gallery block -->
+  <section id="gallery" class="w-7xl px-[60px]">
+    <p class="text-blue text-xl">Prezentacja firmy</p>
+    <h3 class="text-[2.5rem] tracking-tight">Zobacz naszą galerię zdjęć</h3>
+    <div class="mb-[4rem]">
+      <a class="mr-8 text-blue underline underline-offset-4" href="#">Samochody osobowe</a>
+      <a class="" href="#">Samochody dostawcze</a>
+    </div>
+    <div class="flex gap-8 overflow-x-hidden mb-[4rem]">
+      <img src="./assets/Img1.jpg" alt="Car 1" class="w-[600px] h-[440px] object-cover">
+      <img src="./assets/Img2.jpg" alt="Car 2" class="w-[600px] h-[440px] object-cover">
+      <img src="./assets/Img3.jpg" alt="Car 3" class="w-[600px] h-[440px] object-cover">
+    </div>
+    <div class="mb-[5rem] flex justify-center items-center gap-2">
+      <div class="size-2 bg-blue rounded-full"></div>
+      <div class="size-2 bg-slate-200 rounded-full"></div>
+      <div class="size-2 bg-slate-200 rounded-full"></div>
+      <div class="size-2 bg-slate-200 rounded-full"></div>
+      <div class="size-2 bg-slate-200 rounded-full"></div>
+    </div>
+  </section>
+
+  <!-- SEO -->
+  <section id="seo" class="w-7xl text-white bg-darkgray px-[80px] py-[60px] flex gap-12">
+    <div class="">
+      <h4 class="text-2xl mb-4">Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla commodo.</h4>
+      <p class="mb-4">
+        Mauris varius ipsum mauris, rutrum lobortis magna efficitur a. Donec egestas, nisl vehicula feugiat ornare, diam
+        turpis efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et [...]
+      </p>
+      <a href="#" class="border-b-2">Rozwiń <img class="inline" src="./assets/arrow-down.svg" alt="arrow down" /></a>
+    </div>
+    <div class="">
+      <h4 class="text-2xl mb-4">Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla commodo.</h4>
+      <p class="mb-4">
+        Mauris varius ipsum mauris, rutrum lobortis magna efficitur a. Donec egestas, nisl vehicula feugiat ornare, diam
+        turpis efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et [...]
+      </p>
+      <a href="#" class="border-b-2">Rozwiń <img class="inline" src="./assets/arrow-down.svg" alt="arrow down" /></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="w-7xl text-white bg-darkgray px-[80px] py-[20px] flex gap-12 justify-between border-t-2">
+    <p class="font-bold">Cars Spot</p>
+    <a href="#" class="underline underline-offset-4">Polityka prywatności</a>
+  </footer>
+
+</body>
+
+</html>
