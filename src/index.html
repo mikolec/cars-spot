@@ -9,6 +9,8 @@
   <script defer>
     window.onload = () => {
 
+      // Read more
+
       const moreTextEl = document.getElementById('more-text');
       const toggleBtnEl = document.getElementById('toggle-read-more-btn');
       const hideBtnEl = document.getElementById('toggle-read-less-btn');
@@ -49,7 +51,37 @@
         hideBtnEl2.classList.toggle('hidden');
       });
 
+
     }
+
+    // Carousel
+
+    let currentImg = 0; // index of the first image 
+
+    const GAP_SIZE = 32 // gap-8
+
+    function changeSlide(n) {
+      const carousel = document.getElementById("carousel")
+      const slider = document.getElementById("slider")
+      const imgs = document.querySelectorAll('#slider img');
+      const dots = document.querySelectorAll('.dot');
+      const itemWidth = slider.getElementsByTagName("img")[0].clientWidth
+      //      const itemWidth = slider.getElementsByTagName("img")[0].offsetWidth
+      console.log("itemWidth", itemWidth)
+
+
+      for (var i = 0; i < imgs.length; i++) { // reset
+        // imgs[i].style.opacity = 0;
+        dots[i].className = dots[i].className.replace(' active', '');
+      }
+
+      currentImg = n;
+
+      dots[currentImg].className += ' active';
+      slider.style.transform = `translateX(${-(itemWidth + GAP_SIZE) * n}px)`
+    }
+
+
   </script>
 
 </head>
@@ -90,17 +122,21 @@
       <a class="mr-8 text-blue underline underline-offset-4" href="#">Samochody osobowe</a>
       <a class="" href="#">Samochody dostawcze</a>
     </div>
-    <div class="flex gap-8 overflow-x-hidden mb-[4rem]">
-      <img src="./assets/Img1.jpg" alt="Car 1" class="w-[600px] h-[440px] object-cover">
-      <img src="./assets/Img2.jpg" alt="Car 2" class="w-[600px] h-[440px] object-cover">
-      <img src="./assets/Img3.jpg" alt="Car 3" class="w-[600px] h-[440px] object-cover">
+    <div id="carousel" class="overflow-x-hidden mb-[4rem] relative h-[440px]">
+      <div id="slider" class="absolute flex gap-8 transition-all ease-in-out">
+        <img src="./assets/Img1.jpg" alt="Car 1" class="w-[600px] h-[440px] object-cover">
+        <img src="./assets/Img2.jpg" alt="Car 2" class="w-[600px] h-[440px] object-cover">
+        <img src="./assets/Img3.jpg" alt="Car 3" class="w-[600px] h-[440px] object-cover">
+        <img src="./assets/pexels-aaronmcurtis.jpg" alt="Car 4" class="w-[600px] h-[440px] object-cover">
+        <img src="./assets/pexels-brett-sayles.jpg" alt="Car 5" class="w-[600px] h-[440px] object-cover">
+      </div>
     </div>
-    <div class="mb-[5rem] flex justify-center items-center gap-2">
-      <div class="size-2 bg-slate-200 rounded-full active"></div>
-      <div class="size-2 bg-slate-200 rounded-full"></div>
-      <div class="size-2 bg-slate-200 rounded-full"></div>
-      <div class="size-2 bg-slate-200 rounded-full"></div>
-      <div class="size-2 bg-slate-200 rounded-full"></div>
+    <div class="navigation-button mb-[5rem] flex justify-center items-center gap-2">
+      <div class="dot size-2 bg-slate-200 hover:bg-slate-500 rounded-full active" onclick="changeSlide(0)"></div>
+      <div class="dot size-2 bg-slate-200 hover:bg-slate-500 rounded-full" onclick="changeSlide(1)"></div>
+      <div class="dot size-2 bg-slate-200 hover:bg-slate-500 rounded-full" onclick="changeSlide(2)"></div>
+      <div class="dot size-2 bg-slate-200 hover:bg-slate-500 rounded-full" onclick="changeSlide(3)"></div>
+      <div class="dot size-2 bg-slate-200 hover:bg-slate-500 rounded-full" onclick="changeSlide(4)"></div>
     </div>
   </section>
 
